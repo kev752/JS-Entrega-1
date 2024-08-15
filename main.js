@@ -9,8 +9,7 @@ function par_o_impar(num) {
   }
 }
 
-let numero = prompt("Ingrese un número para verificar si es par o impar");
-par_o_impar(numero);
+par_o_impar(1);
 
 console.log("------------------------------");
 
@@ -34,9 +33,7 @@ function menor_o_mayor(num1, num2) {
   }
 }
 
-let numero1 = prompt("Ingrese un número");
-let numero2 = prompt("Ingrese un numero para comparar con el primero");
-menor_o_mayor(numero1, numero2);
+menor_o_mayor(2, 3);
 
 console.log("------------------------------");
 
@@ -51,8 +48,7 @@ function multiplo5(num5) {
   }
 }
 
-let numero5 = prompt("Ingrese numero para verificar si es multiplo de 5");
-multiplo5(numero5);
+multiplo5(4);
 
 console.log("------------------------------");
 
@@ -66,5 +62,72 @@ function imprimir(n) {
   }
 }
 
-let n = prompt("Ingresá hasta qué número querés imprimir");
-imprimir(n);
+imprimir(5);
+
+console.log("------------------------------");
+
+// 5 - Crear una función que reciba una palabra y un número
+// por parámetro e imprima por consola esa palabra la cantidad
+// correspondiente al número indicado.
+
+const print = (palabra, veces) => {
+  for (i = 1; i <= veces; i++) {
+    console.log(palabra);
+  }
+};
+
+print("Messi", 10);
+
+console.log("------------------------------");
+
+// 6 - Crear una función que reciba un array por parámetro
+// e imprima por consola todos los valores de ese array.
+
+const printArray = (miArray) => {
+  for (i = 0; i <= miArray.length - 1; i++) {
+    console.log(miArray[i]);
+  }
+};
+
+let miArray = [6, 7, 8, 9, 10];
+
+printArray(miArray);
+
+console.log("------------------------------");
+
+// 7 - Crear una función que reciba un array con 10 números
+// e imprima por consola todos los valores de ese array, menos
+// el que se encuentre en la 5ta posición del mismo.
+// Ayuda: Recuerden que el primer índice de un array es "0".
+
+const printContinue = (array) => {
+  for (i = 0; i < array.length; i++) {
+    if (i === 4) {
+      console.log("El valor de la 5ta posición del array fue saltado.");
+      continue;
+    }
+    console.log(array[i]);
+  }
+};
+
+let arrayContinue = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+printContinue(arrayContinue);
+
+console.log("------------------------------");
+
+//   8 - Crea una función que reciba un array de números
+// y un número por parámetro e imprima por consola cada número
+// del array multiplicado por el número pasado por parámetro.
+
+const multiplicar = (array, numero) => {
+  for (i = 0; i < array.length; i++) {
+    console.log(
+      `${array[i]} multiplicado por ${numero} es ${array[i] * numero}`
+    );
+  }
+};
+
+let otroArray = [21, 22, 23, 24, 25];
+
+multiplicar(otroArray, 2);
